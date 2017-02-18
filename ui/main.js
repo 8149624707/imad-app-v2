@@ -1,3 +1,3 @@
 console.log('Loaded!');
-var element = document.getElementbyid('main-txt');
+var element = document.getElementById('main-txt');
 element.innerHTML('kiran sharma');
