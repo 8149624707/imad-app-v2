@@ -1,6 +1,6 @@
 console.log('Loaded!');
 var element = document.getElementById('main-txt');
-element.innerHTML='kiran sharma';
+element.innerHTML='I am single,ready to mingle!!';
 var img= document.getElementById('image');
 var marginLeft=0;
 function moveRight(){
