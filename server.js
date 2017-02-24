@@ -5,80 +5,46 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
  
-var articleone = {
-title:'Article one | Sujata ',
-heading:'Have you ever met him ?',
-name:'by sujata',
-content:`<p>"Have you ever met him",The world always asked ..<br>
-Is it required,She always answered  but to herself.</p>
+var articletwo = {
+title:'Article one | Niraj ',
+heading:'I wish i could travel time',
+name:'by niraj',
+content:`<p>I wish I could travel time....,<br>
+Just to see the joyful faces of my loved ones.</p>
 
+<p>I wish I could travel time....,<br>
+Just to appreciate the sacrifices my father made.</p>
 
-<p>Noisy canteen,some nostalgic stories and this is how it started..<br>
-There's something in this face,she remarks<br>
-He's my brother,friend replied.<br>
-With a smile on her face and some clingy thoughts in her mind ..<br>
-Request was send..<br>
-To the surprise,it was accepted even faster than was sent</p>
+<p> wish I could travel time....,<br>
+Just to be small enough to fit in my mother's lap.</p>
 
-<p>Serious disgnosis of the profile went for hours..<br>
-The smile or precisely the dimples, got her closer<br>
-Many hours were spent talking with the pictures..<br>
-"When in doubt,wear red"was his caption<br>
-And She read it innmuerable times..<br>
-She felt,She was overthinking and suddenly..</p>
+<p>I wish I could travel time....,<br>
+Just to get glimpse of my sweet little toothless sister.</p>
 
-<p>A message on insta popped..<br>
-Her joy knew no bounds.<br>
-Notifications used to give her utmost happiness<br>
-Continuous chats,turned aquaintance to friendship..<br>
-She waited hours in night just to see a blue heart on her screen..<br>
-And it was her first serious crush,She accepted.</p>
+<p>I wish I could travel time....,<br>
+Just to get astonished by powerful brother thrashing bullies.
 
-<p>He assured her,a special friendship and<br>
-She said She was happy..<br>
-A lot of thoughts drove her away<br>
-But his charm brought her closer<br>
-And closer..<br>
-Why can't He feel the same?,was her question to herself..</p>
+<p>I wish I could travel time....,<br>
+Just to have crush on my teacher once more.</p>
 
-<p>Weekly calls were soon promoted to daily<br>
-Minutes soon turned into hours..<br>
-And crush...to love.<br>
-Her life was full of special feeling of love,<br>
-She was pampered by all..<br>
-But She desired to be cared by only one.</p>
+<p>I wish I could travel time....,<br>
+Just to appreciate how amazing school life was.</p>
 
-<p>Several attempts were made to move on<br>
-Only if blocking would be a way to avoid,He would have left long back..<br>
-Both needed each other <br>
-May be just to share their talks..their stories..their laughter<br>
-What matters was the need.<br>
-The need of her for him and<br> 
-his for her..</p>
+<p>I wish I could travel time....,<br>
+Just to play hide and seek with my friends.</p>
 
-<p>She soon found her bestfriend in him<br>
-And tried her best, to be his favourite listener<br>
-At all times..<br>
-But destiny had decided something,<br> 
-More happening,More adventurous.</p>
+<p>I wish I could travel time....,<br>
+Just to lay on the bed without panicking about the next day.</p>
 
-<p>Nothing comes before family,were her words.<br>
-We belong to good families,were his.<br>
-And separation was decided..<br>
-Of two true souls,"never met".<br>
-One last question was the angel's plan<br>
-He asked"Have you moved on?"<br>
-Yes,and mere silence.</p>
+<p>I wish I could travel time....,<br>
+Just to be away from our coward and nosy society.</p>
 
-<p>What came next was not less than a miracle for her<br>
-He accepted his feelings for her..the love..the care..the sorrow of gettting separated<br>
-She couldn't lie anymore and <br>
-Both felt a virtual hug,He felt his heart was light,She felt She heard everything She always wanted.<br>
-But the question still stayed firm for her<br>
-"Have you ever met him?"<br>
-"It matters no more"she answeres now..</p>`
+<p>The bitter truth is you cannot travel time.
+The nature has it own laws and reasons for existence of every single atom and being  in the universe.It's meritless by getting stuck in the past
+,or imagining how our future will be.So all we can do start the living in the present because, sometimes you will never know the value of
+the moment until it becomes a memory.</p>
+`
 };
-
 function createTemplate (data) {
     var title=data.title;
     var heading=data.heading;
@@ -118,7 +84,7 @@ app.get('/article-one',function(req,res){
     res.send(createTemplate(articleone));
 });
 app.get('/article-two',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+    res.send(createTemplate(articletwo));
 });
 app.get('/article-three',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
