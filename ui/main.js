@@ -7,7 +7,7 @@ button.onclick =function(){
     request.onreadystatechange= function(){
         if(request.readystate === XMLHttpRequest.DONE)
         {
-            if(request.status=== 200)
+            if(request.status === 200)
             {
                 var counter = request.responseText;
                 var span=document.getElementById(`count`);
@@ -16,7 +16,7 @@ button.onclick =function(){
         }
     };
     
-    request.open('GET','http://user-8149624707.imad.hasura-app.io/counter',true);
+    request.open(`GET`,`http://user-8149624707.imad.hasura-app.io/counter`,true);
     request.send(null);
     
     
