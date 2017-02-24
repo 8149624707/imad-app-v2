@@ -28,7 +28,7 @@ var submit =document.getElementById(`submit_btn`);
 submit.onclick=function(){
     
     var names =[`name1`,`name2`,`name3`,`name  4`];
-    var lst=``;
+    var lst='';
     for(var i=0;i<names.length;i++)
     {
         lst += '<li>'+names[i]+'</li>';
