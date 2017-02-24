@@ -31,7 +31,7 @@ submit.onclick=function(){
     var lst=``;
     for(var i=0;i<names.length;i++)
     {
-        lst += '<li>'+names[i]+'<li>';
+        lst += '<li>'+names[i]+'</li>';
     }
     var ul =document.getElementById(`namelist`);
     ul.innerHTML =lst;
