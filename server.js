@@ -28,7 +28,7 @@ app.get('/test-db',function(req,res){
     //make a select request
     //return a response with result
 
-    pool.query('se;ect 8 from test',function(err,query){
+    pool.query('select * from test',function(err,query){
         if(err)
         {
            res.status(500).send(err.toString());
