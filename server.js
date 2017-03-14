@@ -11,8 +11,68 @@ var config = {
   password:process.env.DB_PASSWORD
 };
 
+var articleOne = {
+    title:'Article one | Sujata ',
+    heading:'Maa',
+    date:' 14 march,2017',
+    content:`<pre>
+I know,We don't share the relationship..
+Like other Mother-daughter's do..
+I don't talk to You daily..
+I don't cry  about my sorrows..
+I don't hug You tight out of happiness..
 
+But
 
+There is something,
+I need to talk to You,only You
+When I am feeling low..
+I need to cry to You,only You
+When I am sad..
+I need to hug You tightest
+When I am happiest..
+
+You have never shown 
+your unconditional love for me
+When I was with You..
+But You are the one whose tears don't stop
+When I leave You and come..
+
+As a child,I always thought 
+I am Daddy's girl and  
+You love your sons more,
+Now when I see behind,
+I see things differently..
+I have never given You the joy of motherhood
+Never given You the grace of being a mother to a daughter,her only daughter..
+Days cannot come back,Time cannot be retraced..
+
+When You tell me that your eyes are dried..
+Tears cannot be formed,
+I cannot even transplant my weak eyes to you Maa..
+I cannot even get You the best treatment now..
+I cannot see You look old,with wrinkles around your beautiful eyes.
+
+If ever I am able to achieve anything in life..
+It would be the outcome of all your sacrifices..
+All the comforts You gave up for providing me all that I never even asked for..
+I never say it
+But 
+I love You the most,Maa.
+</pre>`
+    
+};
+
+var htmltemplate =`
+<html>
+<title>
+<head>
+</head>
+</title>
+<body>
+<body>
+</html>
+`;
 var app = express();
 app.use(morgan('combined'));
 var counter = 0; 
@@ -20,6 +80,7 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
+
 
 // create the pool somewhere globally so its lifetime
 // lasts for as long as your app is running
