@@ -62,6 +62,7 @@ I love You the most,Maa.
 </pre>`
     
 };
+
 function createTemplate(data){
 var title=data.title;
 var heading=data.heading;
@@ -96,7 +97,7 @@ var htmltemplate =`
 </html>
 `;
 
-    return htmlTemplate;
+    return htmltemplate;
 }
 var app = express();
 app.use(morgan('combined'));
