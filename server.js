@@ -80,7 +80,7 @@ var htmltemplate =`
 <body>
         <div class=container>
           <div>
-             <ahref="/">Home</a>
+             <a href="/">Home</a>
           </div>
           <hr>
           <h3>
