@@ -62,17 +62,42 @@ I love You the most,Maa.
 </pre>`
     
 };
-
+function createTemplate(data){
+var title=data.title;
+var heading=data.heading;
+var date=data.date;
+var content=data.content;
 var htmltemplate =`
 <html>
-<title>
-<head>
-</head>
-</title>
+      <head>
+         <title>
+         ${title}
+         </title>
+         <meta name="viewport" content="width=device-width , intial-scale=1"/>
+         <link href="/ui/style.css" rel="stylesheet"/>
+      </head>
 <body>
-<body>
+        <div class=container>
+          <div>
+             <ahref="/">Home</a>
+          </div>
+          <hr>
+          <h3>
+          ${heading}
+          </h3>
+          <div>
+          ${date}
+          </div>
+          <div>
+          ${content}
+          </div>
+        </div>
+</body>
 </html>
 `;
+
+    return htmlTemplate;
+}
 var app = express();
 app.use(morgan('combined'));
 var counter = 0; 
@@ -101,6 +126,9 @@ app.get('/test-db',function(req,res){
 });
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+app.get('/article-one', function (req, res) {
+  res.send(createTemplate(articleOne));
 });
 
 app.get('/ui/style.css', function (req, res) {
