@@ -244,6 +244,9 @@ app.get('/raashi', function (req, res) {
 app.get('/ui/niraj.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'niraj.jpg'));
 });
+app.get('/ui/NEVER BE ALONE- SHAWN MENDES(FIRST COVER).mp4', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'NEVER BE ALONE- SHAWN MENDES(FIRST COVER).mp4'));
+});
 var names = [];
 app.get('/submit-name', function (req, res) {
  var name=req.query.name;
