@@ -226,7 +226,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/article/:articleName', function (req, res) {
-    pool.query("select * from test where title = ' "+req.params.articleName + " '",function(err,result){
+    pool.query("SELECT * FROM test WHERE title ='"+ req.params.articleName + "'",function(err,result){
         if(err)
         {
            res.status(500).send(err.toString());
