@@ -166,14 +166,14 @@ app.post('/login',function(req,res){
                  }
                  else
                  {
-                     res.send(403).send('usrname/password is invalid');
+                     res.send(403).send('username/password is invalid');
                  }
             }
         }
     });
 });
 app.get('/check-login',function(req,res){
-    if(req.session&&re.session.auth&&req.session.auth.userid)
+    if(req.session&&req.session.auth&&req.session.auth.userid)
     {
         req.send('You are logged in'+userid.toString());
     }
