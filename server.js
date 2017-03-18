@@ -56,7 +56,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(session({
     secret:'niru',
-    cookie:{maxAge:1000*60*60*24*30}
+    cookie:{ maxAge:1000*60*60*24*30 }
 }));
 var counter = 0; 
 app.get('/counter',function(req,res){
@@ -161,7 +161,7 @@ app.post('/login',function(req,res){
                  var hashedpassword=hash(password,salt);
                  if(hashedpassword==dbstring)
                  {
-                     req.session.auth = {userid:results.row[0].id};
+                     req.session.auth = {userid:result.row[0].id};
                      res.send('Credentials correct');
                  }
                  else
