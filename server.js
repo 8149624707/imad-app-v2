@@ -122,10 +122,10 @@ app.get('/hash/:input',function(req,res){
 app.post('/create-user',function(req,res){
    
    var username=req.params.username;
-   var password=req.params.username;
-   var salt=crypto.getRandomBytes(128).toString('hex');
+   var password=req.params.password;
+   var salt=crypto.randombytes(128).toString('hex');
    var dbString=hash(password,salt);
-   pool.query('INSERT into "user"(username,password) values($1,$2)',[username,password],function(err,result){
+   pool.query('INSERT into "user"(username,password) VALUES($1,$2)',[username,password],function(err,result){
         if(err)
         {
            res.status(500).send(err.toString());
